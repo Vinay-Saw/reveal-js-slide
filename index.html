@@ -240,7 +240,7 @@
 
                 <section>
                     <h3>Gradient Descent Implementation</h3>
-                    <pre><code class="python" data-trim data-line-numbers="1-15|7-8|10-11|13-14">
+                    <pre><code class="language-python" data-trim data-line-numbers="1-15|7-8|10-11|13-14">
 import numpy as np
 
 def gradient_descent(X, y, learning_rate=0.01, epochs=1000):
@@ -272,7 +272,7 @@ def gradient_descent(X, y, learning_rate=0.01, epochs=1000):
 
                 <section>
                     <h3>Neural Network Layer (PyTorch-style)</h3>
-                    <pre><code class="python" data-trim data-line-numbers="1-20|5-7|9-11|13-16">
+                    <pre><code class="language-python" data-trim data-line-numbers="1-20|5-7|9-11|13-16">
 import numpy as np
 
 class LinearLayer:
@@ -300,7 +300,7 @@ class LinearLayer:
 
                 <section>
                     <h3>Softmax & Cross-Entropy Loss</h3>
-                    <pre><code class="python" data-trim data-line-numbers>
+                    <pre><code class="language-python" data-trim data-line-numbers>
 def softmax(z):
     """Convert logits to probabilities"""
     exp_z = np.exp(z - np.max(z, axis=1, keepdims=True))
@@ -437,7 +437,7 @@ probs = softmax(logits)
                             \(\text{LayerNorm}(x) = \gamma \frac{x - \mu}{\sqrt{\sigma^2 + \epsilon}} + \beta\)
                         </p>
                     </div>
-                    <pre class="fragment"><code class="python" data-trim>
+                    <pre class="fragment"><code class="language-python" data-trim>
 def layer_norm(x, gamma, beta, eps=1e-5):
     """Layer normalization for stable training"""
     mean = np.mean(x, axis=-1, keepdims=True)
@@ -494,7 +494,7 @@ def layer_norm(x, gamma, beta, eps=1e-5):
                     <div class="highlight-box fragment">
                         <p><strong>ML Enhancement:</strong> Use neural networks to model complex return distributions, capturing fat tails and non-linear dependencies that traditional methods miss</p>
                     </div>
-                    <pre class="fragment"><code class="python" data-trim>
+                    <pre class="fragment"><code class="language-python" data-trim>
 # ML-based VaR estimation
 model = train_deep_quantile_regression(returns_data)
 var_95 = model.predict_quantile(portfolio, alpha=0.05)
